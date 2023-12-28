@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Absolut';
+	src: url('/fonts/Geologica.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/Atkinson.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background-color: black;
+	position: relative;
+	cursor: default;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.transition-in-up {
+	opacity: 0;
+	transform: translateY(128px); /* Starting from 20px below */
+	animation: transitionInUpAnimation 1s ease-in-out forwards;
+}
+
+@keyframes transitionInUpAnimation {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in-too {
+	opacity: 1;
+	transition: 1s ease-in-out;
+}
