@@ -47,7 +47,7 @@ const pirtysArray = [
 
 <div id="works" class="bg-secondary py-[16px] sm:py-[32px] md:py-[64px] lg:py-[128px] gap-[16px] sm:gap[32px] md:gap-[64px] lg:gap-[128px] flex justify-center flex-col h-[100%]">
     <div class=" flex flex-col lg:flex-row justify-center gap-[16px] sm:gap-[32px] md:gap-[64px] xl:gap-[128px] px-[16px] sm:px-[32px] md:px-[64px] lg:px-[104px] xl:px-[128px] relative">
-        <div use:fadeIn class="relative overflow-hidden opacity-0" style="aspect-ratio: 1.52;">
+        <div use:fadeIn class="relative overflow-hidden opacity-0 w-[100%]" style="aspect-ratio: 1.52;">
             {#each karkasArray as img, index}
             {#if index === currentIndex}
             <picture>
@@ -94,7 +94,7 @@ const pirtysArray = [
             </a>
             <p class="text-a md:text-p text-gray-500"><span class="text-primary">{currentIndex + 1}</span>/{karkasArray.length}</p>
         </div> 
-        <div use:fadeIn class="relative overflow-hidden opacity-0" style="aspect-ratio: 1.52;">
+        <div use:fadeIn class="relative overflow-hidden opacity-0 w-[100%]" style="aspect-ratio: 1.52;">
             {#each pirtysArray as img, index}
             {#if index === currentIndex}
             <picture>
