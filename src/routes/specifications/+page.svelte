@@ -8,9 +8,12 @@
     import transitionIn from "../../lib/actions/transitionIn";
     import fadeIn from "../../lib/actions/fadeIn";
     import { fade } from "svelte/transition";
-    
-
 </script>
+
+<svelte:head>
+	<title>Specifikacijos</title>
+	<meta name="description" content="Specifikacijos" />
+</svelte:head>
 
 <section>
     <div id="specifications" class="bg-white p-[16px] sm:p-[32px] md:p-[64px] lg:p-[128px] ">

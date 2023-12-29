@@ -6,10 +6,12 @@
         avif: "/images/avif/k_koliazas1.avif"},
         {wepb:"/images/webp/k_koliazas2.webp", 
         avif:"/images/avif/k_koliazas2.avif"}]
-
-
-
 </script>
+
+<svelte:head>
+	<title>Moduliniai Namai</title>
+	<meta name="description" content="Moduliniai Namai" />
+</svelte:head>
 
 <section class="bg-secondary text-primary w-full">
     <div class="flex flex-col gap-[8px] sm:gap-[16px] md:gap-[32px] lg:gap-[64px] px-[16px] sm:px-[32px] md:px-[64px] lg:px-[128px]  py-[8px] sm:py-[16px] md:py-[32px] lg:py-[64px]">

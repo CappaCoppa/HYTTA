@@ -27,10 +27,13 @@
         avif: "/images/avif/p_koliazas6.avif"
     }
 ];
-
-
-
 </script>
+
+<svelte:head>
+	<title>Pirtys</title>
+	<meta name="description" content="Pirtys" />
+</svelte:head>
+
 <section class="bg-secondary text-primary">
     <div class="flex flex-col gap-[8px] sm:gap-[16px] md:gap-[32px] lg:gap-[64px] px-[16px] sm:px-[32px] md:px-[64px] lg:px-[128px]  py-[8px] sm:py-[16px] md:py-[32px] lg:py-[64px]">
         {#each imgArray as img, index}

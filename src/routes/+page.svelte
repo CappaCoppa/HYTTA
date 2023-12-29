@@ -6,8 +6,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>HYTTA</title>
+	<meta name="description" content="Hytta construction company" />
 </svelte:head>
 
 <section>
