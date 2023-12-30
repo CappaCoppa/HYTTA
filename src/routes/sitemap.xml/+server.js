@@ -12,19 +12,19 @@ export async function GET() {
                     <!-- <url> elements go here -->		
                     <url>
                         <loc>https://www.hytta.lt</loc>
-                        <lastmod>${date.getDate()}</lastmod>
+                        <lastmod>${date.getUTCFullYear()}</lastmod>
                     </url>
                     <url>
                         <loc>https://www.hytta.lt/specifications</loc>
-                        <lastmod>${date.getDate()}</lastmod>
+                        <lastmod>${date.getUTCFullYear()}</lastmod>
                     </url>
                     <url>
                         <loc>https://www.hytta.lt/works/saunas</loc>
-                        <lastmod>${date.getDate()}</lastmod>
+                        <lastmod>${date.getUTCFullYear()}</lastmod>
                     </url>
                     <url>
                         <loc>https://www.hytta.lt/works/framed-houses</loc>
-                        <lastmod>${date.getDate()}</lastmod>
+                        <lastmod>${date.getUTCFullYear()}</lastmod>
                     </url>
                     </urlset>`.trim(),
 		{
