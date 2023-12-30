@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-	<title>Pirtys</title>
+	<title>HYTTA - Pirtys</title>
 	<meta name="description" content="Pirtys" />
 </svelte:head>
 

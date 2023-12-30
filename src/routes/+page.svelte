@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>HYTTA</title>
+	<title>HYTTA - Moduliniai Namai ir Pirtys</title>
 	<meta name="description" content="Hytta construction company" />
 </svelte:head>
 

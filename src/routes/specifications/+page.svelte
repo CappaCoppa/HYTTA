@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Specifikacijos</title>
+	<title>HYTTA - Specifikacijos</title>
 	<meta name="description" content="Specifikacijos" />
 </svelte:head>
 

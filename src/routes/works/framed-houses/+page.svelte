@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Moduliniai Namai</title>
+	<title>HYTTA - Moduliniai Namai</title>
 	<meta name="description" content="Moduliniai Namai" />
 </svelte:head>
 
