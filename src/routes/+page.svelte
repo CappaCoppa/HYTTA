@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section>
-	<div class="hero-banner h-[25vh] sm:h-[50vh] md:h-[70vh] lg:h-[100vh] relative animate-fadeIn overflow-hidden" style="animation-delay: 0.8s;">
+	<div class="hero-banner h-[50vh] sm:h-[50vh] md:h-[70vh] lg:h-[100vh] relative animate-fadeIn overflow-hidden" style="animation-delay: 0.8s;">
 		<div class=" absolute w-full h-full z-40 bg-primary opacity-0 animate-fadeOpacity" style="animation-delay: 1.8s;"></div>
 		<div class="py-[16px] h-full z-40 flex w-full animate-fadeIn opacity-0"  style="animation-delay: 2.8s;">
 			<div class="text-secondary flex flex-col justify-center w-full px-[16px] sm:px-[32px] md:px-[64px] lg:px-[128px]" >
