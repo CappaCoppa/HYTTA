@@ -1,3 +1,28 @@
+<script>
+    let name = "";
+    let surname = "";
+    let email = "";
+    let number  = "";
+    let message = "";
+
+    const handleSubmit = async () => {
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, surname, email, number, message }),
+    });
+
+    if (response.ok) {
+      console.log('Email sent successfully');
+      // Reset form or navigate to another page
+    } else {
+      console.error('Failed to send email');
+    }
+  }
+</script>
+
 <div
             id="contact"
             class="bg-primary p-8 md:p-[64px] h-auto md:h-[100vh] overflow-hidden"
@@ -16,6 +41,7 @@
                             <div class="w-full flex flex-col gap-4 md:gap-[16px]">
                                 <p class="text-a sm:text-p md:text-h6 lg:text-h5">Vardas</p>
                                 <input
+                                    bind:value={name}
                                     type="text"
                                     class="font-secondary focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40 "
                                     placeholder="Olivia"
@@ -24,6 +50,7 @@
                             <div class="w-full flex flex-col gap-4 md:gap-[16px]">
                                 <p class="text-a sm:text-p md:text-h6 lg:text-h5">Pavardė</p>
                                 <input
+                                    bind:value={surname}
                                     type="text"
                                     class="font-secondary focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
                                     placeholder="Wilson"
@@ -34,7 +61,8 @@
                             <div class="w-full flex flex-col gap-4 md:gap-[16px]">
                                 <p class="text-a sm:text-p md:text-h6 lg:text-h5">El. Paštas</p>
                                 <input
-                                    type="text"
+                                    bind:value={email}
+                                    type="email"
                                     class="font-secondary focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
                                     placeholder="hello@reallygreatsite.com"
                                 />
@@ -44,6 +72,7 @@
                                     Mobilusis Numeris
                                 </p>
                                 <input
+                                    bind:value={number}
                                     type="tel"
                                     class="focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
                                     placeholder="+370 693 282 92"
@@ -55,6 +84,7 @@
                         <div class="flex flex-col gap-4 md:gap-[16px] w-full">
                             <p class="text-a sm:text-p md:text-h6 lg:text-h5">Pranešimas</p>
                             <textarea
+                                bind:value={message}
                                 type="text"
                                 class="focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
                                 placeholder="Parašyti savo pranešimą"
