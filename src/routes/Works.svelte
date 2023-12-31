@@ -65,7 +65,7 @@ const pirtysArray = [
                 Moduliniai Namai
             </h2>
             <p class="font-secondary text-a md:text-p md:w-[80%] text-primary tracking-widest">
-                <span class="uppercase">Moduliniai namai</span> - atspindi šiuolaikinio gyvenimo dinamiškumą ir lankstumą.  Šie namai pasižymi aukštu energijos efektyvumu, moderniu dizainu ir galimybe lengvai adaptuoti namą prie besikeičiančių gyvenimo sąlygų.
+            atspindi šiuolaikinio gyvenimo dinamiškumą ir lankstumą.  Šie namai pasižymi aukštu energijos efektyvumu, moderniu dizainu ir galimybe lengvai adaptuoti namą prie besikeičiančių gyvenimo sąlygų.
             </p>
             <a href="/works/framed-houses" class="text-a md:text-p group border-2 border-gray-300 px-[16px] py-[8px] text-primary font-secondary uppercase tracking-[2px] flex gap-[8px] justify-center items-center stroke-primary hover:border-primary hover:bg-primary hover:text-secondary transition-all ease-in-out duration-700 hover:stroke-secondary">
                 Eikite į galeriją <spna class="group-hover:translate-x-2 transition-transform ease-in-out duration-700"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
