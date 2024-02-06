@@ -32,7 +32,7 @@
                         type="image/avif"
                         srcset="/images/avif/roof.avif"
                     />
-                    <img use:fadeIn class="opacity-0" src=/images/web/roof.webp alt="images" transition:fade/>
+                    <img use:fadeIn class="opacity-0" src=/images/webp/roof.webp alt="images" transition:fade/>
                 </picture>
             </div>
 
