@@ -56,7 +56,7 @@
                         type="image/avif"
                         srcset="/images/avif/wall.avif"
                     />
-                    <img src="/images/png/wall.png" alt="images" transition:fade/>
+                    <img src="/images/webp/wall.webp" alt="images" transition:fade/>
                 </picture>
             </div>
 
