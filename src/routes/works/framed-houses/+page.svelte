@@ -57,7 +57,7 @@
                 </div>
         {/each}
         <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center">
-            <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center">Dviejų dalių modulinis namelis. Išorės matmenys 6.15×6,15 iki kraigo 3,80.</p>
+            <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Dviejų dalių modulinis namelis. Išorės matmenys 6.15×6,15 iki kraigo 3,80.</p>
         </div>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-[4px] sm:gap-[6px] md:gap-[16px] lg:gap-[32px] border-b-[4px] border-[#e5e7eb]  pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]  pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
@@ -81,7 +81,7 @@
         {/each}
         <div class="col-span-5 grid grid-cols-1 lg:grid-cols-4 gap-[4px] sm:gap-[6px] md:gap-[16px] lg:gap-[32px]">
         <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center">
-        <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center">Dviejų dalių modulinis namelis su pastoge, tiesios lubos, aukštis iki lubų 2,75 iki kraigo 3,90.</p>
+        <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Dviejų dalių modulinis namelis su pastoge, tiesios lubos, aukštis iki lubų 2,75 iki kraigo 3,90.</p>
         </div>
         {#each imgArray3 as img}
                 <div transition:fade use:fadeIn class="opacity-0 flex w-full">
@@ -111,7 +111,7 @@
                 </div>
         {/each}
         <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center">
-        <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center">Gyvenamasis namelis su pastoge -  3,2 × 8,5 m.</p>
+        <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Gyvenamasis namelis su pastoge -  3,2 × 8,5 m.</p>
         </div>
         </div>
 </section>
