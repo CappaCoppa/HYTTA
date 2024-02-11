@@ -43,7 +43,11 @@
 </svelte:head>
 
 <section class="bg-secondary text-primary w-full px-[16px] sm:px-[32px] md:px-[64px] lg:px-[128px]  py-[8px] sm:py-[16px] md:py-[32px] lg:py-[64px]">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[4px] sm:gap-[6px] md:gap-[16px] lg:gap-[32px] border-b-[4px] border-[#e5e7eb] pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[8px] md:gap-[16px] lg:gap-[32px] md:border-b-[4px] border-[#e5e7eb] pb-[16px] md:pb-[32px] lg:pb-[64px]">
+        <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center py-[16px] md:hidden">
+            <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Dviejų dalių modulinis namelis. Išorės matmenys 6.15×6,15 iki kraigo 3,80.</p>
+        </div>
         {#each imgArray as img}
                 <div transition:fade use:fadeIn class="opacity-0 flex w-full">
                     <picture class="w-fit">
@@ -51,16 +55,19 @@
                     type="image/avif"
                     srcset={img.avif}
                     />    
-                        <img src={img.webp} loading="lazy" alt="Namu koliazas">
+                        <img src={img.webp} loading="lazy" alt="Namu olikazas">
                     </picture>
                     <div class=""></div>
                 </div>
         {/each}
-        <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center">
+        <div transition:fade use:fadeIn class="opacity-0 hidden flex-col w-full items-center justify-center py-[16px] md:flex">
             <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Dviejų dalių modulinis namelis. Išorės matmenys 6.15×6,15 iki kraigo 3,80.</p>
         </div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-[4px] sm:gap-[6px] md:gap-[16px] lg:gap-[32px] border-b-[4px] border-[#e5e7eb]  pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]  pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
+    <div transition:fade use:fadeIn class="opacity-0 py-[16px] flex flex-col w-full items-center justify-center md:hidden">
+        <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Dviejų dalių modulinis namelis su pastoge, tiesios lubos, aukštis iki lubų 2,75 iki kraigo 3,90.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-[8px] md:gap-[16px] lg:gap-[32px] md:border-b-[4px] border-[#e5e7eb]  pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]  pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
         {#each imgArray2 as img, index}
             {#if index === 0}
                 <div transition:fade use:fadeIn class="opacity-0 flex w-full col-span-4">
@@ -79,8 +86,8 @@
                 </div>
             {/if}
         {/each}
-        <div class="col-span-5 grid grid-cols-1 lg:grid-cols-4 gap-[4px] sm:gap-[6px] md:gap-[16px] lg:gap-[32px]">
-        <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center">
+        <div class="col-span-5 grid grid-cols-1 lg:grid-cols-4 gap-[8px] md:gap-[16px] lg:gap-[32px]">
+        <div transition:fade use:fadeIn class="opacity-0 hidden flex-col w-full items-center justify-center md:flex ">
         <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Dviejų dalių modulinis namelis su pastoge, tiesios lubos, aukštis iki lubų 2,75 iki kraigo 3,90.</p>
         </div>
         {#each imgArray3 as img}
@@ -97,9 +104,12 @@
         {/each}
         </div>
         </div>
-        <div class="col-span-5 grid grid-cols-1 lg:grid-cols-4 gap-[4px] sm:gap-[6px] md:gap-[16px] lg:gap-[32px] pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
-        {#each imgArray4 as img}
-                <div transition:fade use:fadeIn class="opacity-0 flex w-full">
+        <div class="col-span-5 grid grid-cols-1 lg:grid-cols-4 gap-[8px] md:gap-[16px] pb-[16px] lg:gap-[32px] pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
+        <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center ">
+        <p class="text-p sm:text-h6 py-[16px] block md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Gyvenamasis namelis su pastoge -  3,2 × 8,5 m.</p>
+        </div>
+            {#each imgArray4 as img}
+                <div transition:fade use:fadeIn class="opacity-0 flex w-full min-h-[300px]">
                     <picture class="w-fit">
                     <source 
                     type="image/avif"
@@ -110,9 +120,6 @@
                     <div class=""></div>
                 </div>
         {/each}
-        <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center">
-        <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Gyvenamasis namelis su pastoge -  3,2 × 8,5 m.</p>
-        </div>
         </div>
 </section>
 
