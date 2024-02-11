@@ -64,7 +64,7 @@ const pirtysArray = [
             <h2 class="text-p sm:text-h6 md:text-h5 tracking-[2px] font-primary uppercase text-primary w-full">
                 Moduliniai Namai
             </h2>
-            <p class="font-secondary text-a md:text-p md:w-[80%] text-primary tracking-widest">
+            <p class="font-secondary text-a md:text-p py-[16px] md:py-[0px] md:w-[80%] text-primary tracking-widest">
             Atspindi šiuolaikinio gyvenimo dinamiškumą ir lankstumą.  Šie namai pasižymi aukštu energijos efektyvumu, moderniu dizainu ir galimybe lengvai adaptuoti namą prie besikeičiančių gyvenimo sąlygų.
             </p>
             <a href="/works/framed-houses" class="text-a md:text-p group border-2 border-gray-300 px-[16px] py-[8px] text-primary font-secondary uppercase tracking-[2px] flex gap-[8px] justify-center items-center stroke-primary hover:border-primary hover:bg-primary hover:text-secondary transition-all ease-in-out duration-700 hover:stroke-secondary">
@@ -82,7 +82,7 @@ const pirtysArray = [
             <h3 class="text-p sm:text-h6 md:text-h5 tracking-[2px] font-primary uppercase text-primary w-full">
                 Pirtys
             </h3>
-            <p class="font-secondary text-a md:text-p md:w-[80%] text-primary tracking-widest">
+            <p class="font-secondary text-a md:text-p py-[16px] md:py-[0px] md:w-[80%] text-primary tracking-widest">
              Per šimtmečius išsiplėtojusi pirties kultūra liudija, kad ši vieta – tai ne vien patogumas ar prabanga, bet gyvenimo būdo dalis, suteikianti gilumą ir prasmingumą mūsų kasdienybei.
             </p>
             <a href="/works/saunas" class="text-a md:text-p group border-2 border-gray-300 px-[16px] py-[8px] text-primary font-secondary uppercase tracking-[2px] flex gap-[8px] justify-center items-center stroke-primary hover:border-primary hover:bg-primary hover:text-secondary transition-all ease-in-out duration-700 hover:stroke-secondary">
