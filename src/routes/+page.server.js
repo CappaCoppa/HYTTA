@@ -54,7 +54,7 @@ export const actions = {
                 `;
 
 			await mg.messages.create('hytta.lt', {
-				from: 'Hytta  <pranesimas@hytta.lt>',
+				from: 'Hytta  <enquiries@hytta.lt>',
 				to: 'hytta.build@gmail.com',
 				subject: 'Hytta - Pranešimas',
 				html: htmlContent
