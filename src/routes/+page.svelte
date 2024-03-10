@@ -2,7 +2,6 @@
 	import Contact from "./Contact.svelte";
 	import Contacts from "./Contacts.svelte";
 	import Works from "./Works.svelte";
-
 </script>
 
 <svelte:head>

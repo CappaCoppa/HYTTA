@@ -1,31 +1,11 @@
 <script>
-    let name = "";
-    let surname = "";
-    let email = "";
-    let number  = "";
-    let message = "";
-
-    const handleSubmit = async () => {
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, surname, email, number, message }),
-    });
-
-    if (response.ok) {
-      console.log('Email sent successfully');
-      // Reset form or navigate to another page
-    } else {
-      console.error('Failed to send email');
-    }
-  }
+  export let form
 </script>
 
-<div
+<form
             id="contact"
             class="bg-primary p-8 md:p-[64px] h-auto md:h-[100vh] overflow-hidden"
+            method="POST"
         >
             <div class="relative bg-transparent h-full">
                 <div class="corner-border-top-right"></div>
@@ -36,24 +16,26 @@
                             Susisiekti
                         </h3>
                     </div>
-                    <form class="w-full flex flex-col justify-end items-end gap-8 md:gap-[32px] text-secondary font-primary tracking-[4px] ">
+                    <form method="POST" action="/" name="messageForm" class="w-full flex flex-col justify-end items-end gap-8 md:gap-[32px] text-secondary font-primary tracking-[4px] ">
                         <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-[32px] w-full">
                             <div class="w-full flex flex-col gap-4 md:gap-[16px]">
                                 <p class="text-a sm:text-p md:text-h6 lg:text-h5">Vardas</p>
                                 <input
-                                    bind:value={name}
+                                    name="fname"
                                     type="text"
                                     class="font-secondary focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40 "
-                                    placeholder="Olivia"
+                                    placeholder="Vardenis"
+                                    required
                                 />
                             </div>
                             <div class="w-full flex flex-col gap-4 md:gap-[16px]">
                                 <p class="text-a sm:text-p md:text-h6 lg:text-h5">Pavardė</p>
                                 <input
-                                    bind:value={surname}
+                                    name="lname"
                                     type="text"
                                     class="font-secondary focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
-                                    placeholder="Wilson"
+                                    placeholder="Pavardenis"
+                                    required
                                 />
                             </div>
                         </div>
@@ -61,10 +43,11 @@
                             <div class="w-full flex flex-col gap-4 md:gap-[16px]">
                                 <p class="text-a sm:text-p md:text-h6 lg:text-h5">El. Paštas</p>
                                 <input
-                                    bind:value={email}
+                                    name="email"
                                     type="email"
                                     class="font-secondary focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
-                                    placeholder="hello@reallygreatsite.com"
+                                    placeholder="vardenis@paštas.lt"
+                                    required
                                 />
                             </div>
                             <div class="w-full flex flex-col gap-4 md:gap-[16px]">
@@ -72,31 +55,38 @@
                                     Mobilusis Numeris
                                 </p>
                                 <input
-                                    bind:value={number}
+                                    name="tel"
                                     type="tel"
                                     class="focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
                                     placeholder="+370 693 282 92"
                                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                     maxLength={12}
+                                    required
                                 />
                             </div>
                         </div>
                         <div class="flex flex-col gap-4 md:gap-[16px] w-full">
                             <p class="text-a sm:text-p md:text-h6 lg:text-h5">Pranešimas</p>
                             <textarea
-                                bind:value={message}
+                                name="message"
                                 type="text"
                                 class="focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
                                 placeholder="Parašyti savo pranešimą"
+                                required
                             />
                         </div>
+                        {#if form.success}
+                        <div class="flex flex-col gap-4 md:gap-[16px] w-full">
+                            <p class="text-success">{form.success}</p>
+                        </div>
+                        {/if}
                         <button class="bg-secondary text-primary uppercase text-h6 sm:text-h5 md:text-h4 tracking-[2px] w-full p-2 md:p-[8px] cursor-pointer z-40">
                             Siusti
                         </button>
                     </form>
                 </div>
             </div>
-</div>
+        </form>
 
 <style>
     .corner-border-top-right {

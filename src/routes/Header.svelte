@@ -13,41 +13,6 @@
     $: isHomePage = $page.url.pathname === "/";
     $: showHeaderOnSmallScreens = isHomePage && windowWidth < 770;
 
-    // Debounce function
-    function debounce(func, wait) {
-        let timeout;
-        return function(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func.apply(this, args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
-
-    // Check scroll position with debouncing
-    const checkScrollPosition = debounce(() => {
-        const triggerPoint = window.innerHeight * 0.9;
-        showHeader = window.scrollY > triggerPoint;
-    }, 100); // Debounce delay in milliseconds
-
-    onMount(() => {
-        window.addEventListener('scroll', checkScrollPosition);
-        window.addEventListener('resize', updateWindowSize);
-        checkScrollPosition(); // Check immediately on mount
-        updateWindowSize(); // Set initial window size
-
-        return () => {
-            window.removeEventListener('scroll', checkScrollPosition);
-            window.removeEventListener('resize', updateWindowSize);
-        };
-    });
-
-    function updateWindowSize() {
-        windowWidth = window.innerWidth;
-    }
-
 </script>
 
 {#if !isHomePage || showHeader || showHeaderOnSmallScreens}

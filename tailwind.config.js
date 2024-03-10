@@ -5,7 +5,8 @@ export default {
 		extend: {
 			colors: {
 				primary: '#002856',
-				secondary: '#ffffff'
+				secondary: '#ffffff',
+				success: '#0A4228'
 			},
 			fontFamily: {
 				primary: 'var(--font-geologica)',

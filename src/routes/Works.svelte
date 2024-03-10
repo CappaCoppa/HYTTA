@@ -3,6 +3,7 @@
     import { onMount } from "svelte";
     import transitionIn from "../lib/actions/transitionIn"
     import fadeIn from "../lib/actions/fadeIn"
+
     const karkasArray = [
     {
         webp: "/images/webp/Pirtis1.webp",
@@ -38,6 +39,15 @@ const pirtysArray = [
     const nextImage = () => {
         currentIndex = (currentIndex + 1) % karkasArray.length
     }
+    onMount(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const section = document.querySelector(hash);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+ 	});
 
     onMount(() => {
         const interval = setInterval(nextImage, 8000)
@@ -110,3 +120,8 @@ const pirtysArray = [
     </div>
 </div>
 
+<style>
+    #works {
+  min-height: 300px; /* Adjust based on expected content size */
+}
+</style>
