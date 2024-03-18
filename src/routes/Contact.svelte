@@ -1,5 +1,5 @@
 <script>
-  export let form
+//   export let form
 </script>
 
 <form
@@ -58,9 +58,8 @@
                                     name="tel"
                                     type="tel"
                                     class="focus:outline-none focus:text-p md:focus:text-h5 h-12 bg-transparent border-b-2 border-secondary pb-2 md:pb-4 w-full placeholder:text-p md:placeholder:text-h5 text-a sm:text-p md:text-h6 lg:text-h5 placeholder:font-secondary z-40"
-                                    placeholder="+370 693 282 92"
-                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                    maxLength={12}
+                                    placeholder="Įveskite mobilu numerį"
+                                    title="Phone number should start with 86 followed by 7 digits."
                                     required
                                 />
                             </div>
@@ -75,11 +74,11 @@
                                 required
                             />
                         </div>
-                        {#if form.success}
+                        <!-- {#if form.success}
                         <div class="flex flex-col gap-4 md:gap-[16px] w-full">
                             <p class="text-success">{form.success}</p>
                         </div>
-                        {/if}
+                        {/if} -->
                         <button class="bg-secondary text-primary uppercase text-h6 sm:text-h5 md:text-h4 tracking-[2px] w-full p-2 md:p-[8px] cursor-pointer z-40">
                             Siusti
                         </button>

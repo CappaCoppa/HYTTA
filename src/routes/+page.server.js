@@ -1,5 +1,4 @@
 // src/routes/api/send-mail.js
-
 import Mailgun from 'mailgun.js';
 import formData from 'form-data';
 
