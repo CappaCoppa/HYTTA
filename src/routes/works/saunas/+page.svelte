@@ -69,13 +69,13 @@
                 </div>
         {/each}
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[8px] md:gap-[16px] lg:gap-[32px] md:border-b-[4px] border-[#e5e7eb]  pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]  pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[8px] md:gap-[16px] lg:gap-[32px] md:border-b-[4px] border-[#e5e7eb]  pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]  pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
         <div transition:fade use:fadeIn class="opacity-0 flex flex-col w-full items-center justify-center py-[16px] md:hidden">
             <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Pirtis 3×6 su dvišlaičiu stogu.</p>
         </div>
         {#each imgArray2 as img, index}
             {#if index === 0}
-                <div transition:fade use:fadeIn class="backgroundimg hidden md:col-span-2 md:block">
+                <div transition:fade use:fadeIn class="backgroundimg hidden md:col-span-1 md:block">
                     
                 </div>
                 <div transition:fade use:fadeIn class="md:hidden">
@@ -101,7 +101,7 @@
             <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary mr-[98px]">Pirtis 3×6 su dvišlaičiu stogu.</p>
         </div>
         {:else if index === 6}
-            <div transition:fade use:fadeIn class="backgroundimg-2 hidden md:col-span-2 md:block">
+            <div transition:fade use:fadeIn class="backgroundimg-2 hidden md:col-span-1 md:block">
                 </div>
                 <div transition:fade use:fadeIn class="md:hidden">
                     <picture>
@@ -125,9 +125,12 @@
             {/if}
         {/each}
     </div>
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-[8px] md:gap-[16px] lg:gap-[32px] pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]  pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-[8px] md:gap-[16px] lg:gap-[32px] pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]  pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]">
         <div transition:fade use:fadeIn class="opacity-0  md:hidden flex-col w-full items-center justify-center">
         <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary">Pirtis 6×3,4 m.</p>
+        </div>
+        <div transition:fade use:fadeIn class="opacity-0 hidden flex-col w-full items-end justify-center md:flex">
+        <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary pr-[128px]">Pirtis 6×3,4 m.</p>
         </div>
         {#each imgArray3 as img}
                 <div transition:fade use:fadeIn class="opacity-0 flex w-full">
@@ -141,9 +144,6 @@
                     <div class=""></div>
                 </div>
         {/each}
-        <div transition:fade use:fadeIn class="opacity-0 hidden flex-col w-full items-end justify-center md:flex">
-        <p class="text-p sm:text-h6 md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary pl-[128px]">Pirtis 6×3,4 m.</p>
-        </div>
     </div>
 </section>
 
