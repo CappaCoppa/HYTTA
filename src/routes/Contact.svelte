@@ -16,7 +16,7 @@
                             Susisiekti
                         </h3>
                     </div>
-                    <form method="POST" action="/" name="messageForm" class="w-full flex flex-col justify-end items-end gap-8 md:gap-[32px] text-secondary font-primary tracking-[4px] ">
+                    <div method="POST" action="/" name="messageForm" class="w-full flex flex-col justify-end items-end gap-8 md:gap-[32px] text-secondary font-primary tracking-[4px] ">
                         <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-[32px] w-full">
                             <div class="w-full flex flex-col gap-4 md:gap-[16px]">
                                 <p class="text-a sm:text-p md:text-h6 lg:text-h5">Vardas</p>
@@ -82,7 +82,7 @@
                         <button class="bg-secondary text-primary uppercase text-h6 sm:text-h5 md:text-h4 tracking-[2px] w-full p-2 md:p-[8px] cursor-pointer z-40">
                             Siusti
                         </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </form>
