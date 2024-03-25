@@ -112,15 +112,15 @@
 					</p>
 				</div>
 			{:else if index === 6}
-				<div transition:fade use:fadeIn class="backgroundimg-2 hidden md:col-span-1 md:block"></div>
-				<div transition:fade use:fadeIn class="md:hidden">
+				<div use:fadeIn class="backgroundimg-2 hidden md:col-span-1 md:block"></div>
+				<div use:fadeIn class="md:hidden">
 					<picture>
 						<source type="image/avif" srcset={img.avif} />
 						<img src={img.webp} loading="lazy" alt="Namu koliazas" />
 					</picture>
 				</div>
 			{:else}
-				<div transition:fade use:fadeIn>
+				<div use:fadeIn>
 					<picture class="col-span-1">
 						<source type="image/avif" srcset={img.avif} />
 						<img src={img.webp} loading="lazy" alt="Namu koliazas" />
@@ -133,7 +133,6 @@
 		class="grid grid-cols-1 lg:grid-cols-4 gap-[8px] md:gap-[16px] lg:gap-[32px] pb-[8px] sm:pb-[16px] md:pb-[32px] lg:pb-[64px] pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]"
 	>
 		<div
-			transition:fade
 			use:fadeIn
 			class="opacity-0 md:hidden flex-col w-full items-center justify-center"
 		>
@@ -144,7 +143,6 @@
 			</p>
 		</div>
 		<div
-			transition:fade
 			use:fadeIn
 			class="opacity-0 hidden flex-col w-full items-end justify-center md:flex"
 		>
@@ -155,7 +153,7 @@
 			</p>
 		</div>
 		{#each imgArray3 as img}
-			<div transition:fade use:fadeIn class="opacity-0 flex w-full">
+			<div use:fadeIn class="opacity-0 flex w-full">
 				<picture class="w-fit">
 					<source type="image/avif" srcset={img.avif} />
 					<img src={img.webp} loading="lazy" alt="Namu koliazas" />
