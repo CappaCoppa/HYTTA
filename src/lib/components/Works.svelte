@@ -1,8 +1,8 @@
 <script>
     import {fade} from "svelte/transition"
     import { onMount } from "svelte";
-    import transitionIn from "../lib/actions/transitionIn"
-    import fadeIn from "../lib/actions/fadeIn"
+    import transitionIn from "../actions/transitionIn"
+    import fadeIn from "../actions/fadeIn"
 
     const karkasArray = [
     {
@@ -57,7 +57,7 @@ const pirtysArray = [
 
 <div id="works" class="bg-secondary py-[16px] sm:py-[32px] md:py-[64px] lg:py-[128px] gap-[16px] sm:gap[32px] md:gap-[64px] lg:gap-[128px] flex justify-center flex-col h-[100%]">
     <div class=" flex flex-col lg:flex-row justify-center gap-[16px] sm:gap-[32px] md:gap-[64px] xl:gap-[128px] px-[16px] sm:px-[32px] md:px-[64px] lg:px-[104px] xl:px-[128px] relative">
-        <div use:fadeIn class="relative overflow-hidden opacity-0 w-[100%]" style="aspect-ratio: 1.52;">
+        <div use:fadeIn|local={{y:-50,duration:2000}} class="relative overflow-hidden opacity-0 w-[100%]" style="aspect-ratio: 1.52;">
             {#each karkasArray as img, index}
             {#if index === currentIndex}
             <picture>
@@ -65,12 +65,12 @@ const pirtysArray = [
                     type="image/avif"
                     srcset={img.avif}
                 />
-                <img class="absolute top-0 left-0 h-full w-[100%] object-cover" src={img.webp} alt="images" transition:fade={{duration:2000}}/>
+                <img class="absolute top-0 left-0 h-full w-[100%] object-cover" src={img.webp} alt="images" transition:fade|local={{duration:2000}}/>
             </picture>
             {/if}
             {/each}
         </div>
-        <div use:transitionIn class="flex flex-col gap-[4px] sm:gap-[8px] md:gap-[16px] xl:gap-[32px] lg:w-[30%] xl:w-[25%] lg:pb-[16px] xl:pb-[32px] justify-end items-center md:items-start opacity-0 text-center md:text-left">
+        <div use:transitionIn|local={{y:-50,duration:2000}} class="flex flex-col gap-[4px] sm:gap-[8px] md:gap-[16px] xl:gap-[32px] lg:w-[30%] xl:w-[25%] lg:pb-[16px] xl:pb-[32px] justify-end items-center md:items-start opacity-0 text-center md:text-left">
             <h2 class="text-p sm:text-h6 md:text-h5 tracking-[2px] font-primary uppercase text-primary w-full">
                 Moduliniai Namai
             </h2>
@@ -88,7 +88,7 @@ const pirtysArray = [
         </div> 
     </div>
      <div class="flex-col-reverse flex lg:flex-row justify-center gap-[16px] sm:gap-[32px] md:gap-[64px] xl:gap-[128px] px-[16px] sm:px-[32px] md:px-[64px] lg:px-[104px] xl:px-[128px] relative">
-        <div use:transitionIn class="flex flex-col gap-[4px] sm:gap-[8px] md:gap-[16px] xl:gap-[32px] lg:w-[30%] xl:w-[25%] lg:pb-[16px] xl:pb-[32px] justify-end items-center md:items-start opacity-0 text-center md:text-left">
+        <div use:transitionIn|local={{y:-50,duration:2000}} class="flex flex-col gap-[4px] sm:gap-[8px] md:gap-[16px] xl:gap-[32px] lg:w-[30%] xl:w-[25%] lg:pb-[16px] xl:pb-[32px] justify-end items-center md:items-start opacity-0 text-center md:text-left">
             <h3 class="text-p sm:text-h6 md:text-h5 tracking-[2px] font-primary uppercase text-primary w-full">
                 Pirtys
             </h3>
@@ -104,7 +104,7 @@ const pirtysArray = [
             </a>
             <p class="text-a md:text-p text-gray-500"><span class="text-primary">{currentIndex + 1}</span>/{karkasArray.length}</p>
         </div> 
-        <div use:fadeIn class="relative overflow-hidden opacity-0 w-[100%]" style="aspect-ratio: 1.52;">
+        <div use:fadeIn|local={{y:-50,duration:2000}} class="relative overflow-hidden opacity-0 w-[100%]" style="aspect-ratio: 1.52;">
             {#each pirtysArray as img, index}
             {#if index === currentIndex}
             <picture>
@@ -112,7 +112,7 @@ const pirtysArray = [
                     type="image/avif"
                     srcset={img.avif}
                 />
-                <img class="absolute top-0 left-0 h-full w-[100%] object-cover" src={img.webp} alt="images" transition:fade={{duration:2000}}/>
+                <img class="absolute top-0 left-0 h-full w-[100%] object-cover" src={img.webp} alt="images" transition:fade|local={{duration:2000}}/>
             </picture>
             {/if}
             {/each}

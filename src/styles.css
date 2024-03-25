@@ -38,7 +38,6 @@ p {
 	margin: 0;
 	padding: 0;
 }
-
 .transition-in-up {
 	opacity: 0;
 	transform: translateY(128px); /* Starting from 20px below */

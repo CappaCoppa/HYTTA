@@ -1,7 +1,7 @@
 <script>
-	import Contact from "./Contact.svelte";
-	import Contacts from "./Contacts.svelte";
-	import Works from "./Works.svelte";
+	import Contact from "../lib/components/Contact.svelte";
+	import Contacts from "../lib/components/Contacts.svelte"
+	import Works from "../lib/components/Works.svelte";
 </script>
 
 <svelte:head>
