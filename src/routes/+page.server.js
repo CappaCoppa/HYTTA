@@ -11,11 +11,13 @@ const mg = mailgun.client({
 
 export const actions = {
 	default: async ({ request }) => {
+		console.log(request);
 		try {
 			// Parse the incoming form data
 			const form = await request.formData();
 			const fname = form.get('fname');
 			const lname = form.get('lname');
+			console.log(fname);
 			const tel = form.get('tel');
 			const email = form.get('email');
 			const message = form.get('message');
