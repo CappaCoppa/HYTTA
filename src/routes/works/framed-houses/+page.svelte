@@ -28,6 +28,14 @@
 		{ webp: '/images/webp/k_koliazas12.webp', avif: '/images/avif/k_koliazas12.avif' },
 		{ webp: '/images/webp/k_koliazas13.webp', avif: '/images/avif/k_koliazas13.avif' }
 	];
+	const imgArray5 = [
+		{ webp: '/images/webp/namas(3).webp'},
+		{ webp: '/images/webp/namas(1).webp'},
+		{ webp: '/images/webp/namas(2).webp'},
+		{ webp: '/images/webp/namas(4).webp'},
+		{ webp: '/images/webp/namas(5).webp'},
+		{ webp: '/images/webp/namas(6).webp'},
+	];
 </script>
 
 <svelte:head>
@@ -126,7 +134,7 @@
 		</div>
 	</div>
 	<div
-		class="col-span-5 grid grid-cols-1 lg:grid-cols-4 gap-[8px] md:gap-[16px] pb-[16px] lg:gap-[32px] pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]"
+		class="col-span-5 grid grid-cols-1 lg:grid-cols-4 gap-[8px] md:gap-[16px] pb-[16px] lg:gap-[32px] pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px] md:border-b-[4px] border-[#e5e7eb] sm:pb-[16px] md:pb-[32px] lg:pb-[64px]"
 	>
 		<div
 			transition:fade
@@ -147,6 +155,39 @@
 				</picture>
 				<div class=""></div>
 			</div>
+		{/each}
+	</div>
+	<div
+		class="col-span-5 grid grid-cols-1 lg:grid-cols-4 gap-[8px] md:gap-[16px] pb-[16px] lg:gap-[32px] pt-[8px] sm:pt-[16px] md:pt-[32px] lg:pt-[64px]"
+	>
+		<div
+			transition:fade
+			use:fadeIn
+			class="opacity-0 flex flex-col w-full items-center justify-center"
+		>
+			<p
+				class="text-p sm:text-h6 py-[16px] block md:text-h5 tracking-[2px] text-primary w-full text-center font-secondary"
+			>
+			Gyvenamasis karkasinis namelis su pastoge 6×9m. Aukštis iki lubų 2.5 - 3,2 - 2.5m. Iki kraigo 3,8m.
+			</p>
+		</div>
+		{#each imgArray5 as img, index}
+			{#if index === 0}
+			<div transition:fade use:fadeIn class="opacity-0 flex w-full cols-span-1 lg:col-span-2">
+				<picture class="w-fit">
+					<source type="image/avif" srcset={img.avif} />
+					<img src={img.webp} loading="lazy" alt="Namu koliazas" />
+				</picture>
+			</div>
+			{:else}
+			<div transition:fade use:fadeIn class="opacity-0 flex w-full">
+				<picture class="w-fit h-full object-cover object-center">
+					<source class="h-full object-cover object-center" type="image/avif" srcset={img.avif} />
+					<img class="h-full object-cover object-center" src={img.webp} loading="lazy" alt="Namu koliazas" />
+				</picture>
+				<div class=""></div>
+			</div>
+		{/if}
 		{/each}
 	</div>
 </section>

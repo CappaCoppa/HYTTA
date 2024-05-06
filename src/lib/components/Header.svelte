@@ -40,10 +40,10 @@
 				class="hidden md:flex gap-8 uppercase font-primary tracking-[2px] opacity-0 animate-fadeIn text-primary p-[16px] py-[16px]"
 			>
 				<li>
-					<a href="/specifications"> Specifikacijos </a>
+					<a data-sveltekit-reload href="/specifications"> Specifikacijos </a>
 				</li>
 				<li>
-					<a href="/#works"> Darbai </a >
+					<a data-sveltekit-reload href="/#works"> Darbai </a >
 				</li>
 				<li>
 					<a data-sveltekit-reload href="/#contacts"> Kontaktai </a>
