@@ -181,8 +181,8 @@
 			</div>
 			{:else}
 			<div transition:fade use:fadeIn class="opacity-0 flex w-full">
-				<picture class="w-fit h-full object-cover object-center">
-					<source class="h-full object-cover object-center" type="image/avif" srcset={img.avif} />
+				<picture class="w-fit ">
+					<source type="image/avif" srcset={img.avif} />
 					<img class="h-full object-cover object-center" src={img.webp} loading="lazy" alt="Namu koliazas" />
 				</picture>
 				<div class=""></div>
