@@ -1,4 +1,10 @@
 export default function fadeIn(node) {
+	// Check if the screen width is less than 1024 pixels
+	if (window.innerWidth < 1024) {
+		node.style.opacity = 1;
+		return;
+	}
+
 	let hasBeenInView = false;
 
 	const observer = new IntersectionObserver(
@@ -18,7 +24,9 @@ export default function fadeIn(node) {
 
 	return {
 		destroy() {
-			observer.unobserve(node);
+			if (observer) {
+				observer.unobserve(node);
+			}
 		}
 	};
 }
